@@ -8,28 +8,20 @@ let findObjPropsHasOwn = function(object) {
     }
     return properties.join(", ");
 }
-let person = new Object();
-person.name = 'John';
-person.age = '23';
-person.city = 'NY';
+// let person = new Object();
+// person.name = 'John';
+// person.age = '23';
+// person.city = 'NY';
 // console.log(findObjPropsHasOwn(person));
 
 let findObjKeys = function(object){
     let keys = Object.keys(object);
-    let instanceKeys = [];
-
-    for (keys in object){
-        let key = keys;
-        if(object.hasOwnProperty(key)){
-            instanceKeys.push(key)
-        }
-    }
-    return instanceKeys.join(', ')
+    return keys.join(', ');
 }
 
-let person2 = Object.create(person)
-person2.height = "6'0"
-person2.grade = "A"
+// let person2 = Object.create(person)
+// person2.height = "6'0"
+// person2.grade = "A"
 
-console.log(person2)
-console.log(findObjKeys(person2))
+// console.log(person2)
+// console.log(findObjKeys(person2))
